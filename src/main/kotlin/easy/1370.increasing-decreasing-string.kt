@@ -89,8 +89,8 @@
 // @lc code=start
 class Solution1370 {
     fun sortString(s: String): String {
-        var ans = StringBuilder()
-        var cnt = IntArray(26)
+        val ans = StringBuilder()
+        val cnt = IntArray(26)
         for (c in s) cnt[c-'a']++
         while (ans.length < s.length) {
             add(cnt, ans, true)

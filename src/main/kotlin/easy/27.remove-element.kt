@@ -67,7 +67,7 @@
 class Solution27 {
     fun removeElement(nums: IntArray, `val`: Int): Int {
         var res = 0
-        for (i in 0 until nums.size) {
+        for (i in nums.indices) {
             if (nums[i] != `val`) {
                 nums[res++] = nums[i]
             }

@@ -78,14 +78,14 @@
 class Solution1582 {
     fun numSpecial(mat: Array<IntArray>): Int {
         var res = 0
-        for (i in 0 until mat.size) {
+        for (i in mat.indices) {
             var cnt = 0
             for (j in 0 until mat[0].size) {
                 if (mat[i][j] == 1) {
                     cnt++
                     if (cnt > 1) break
                     var ok = true
-                    for (k in 0 until mat.size) {
+                    for (k in mat.indices) {
                         if (i != k && mat[k][j] != 0) {
                             ok = false
                             break
@@ -97,7 +97,7 @@ class Solution1582 {
                             break
                         }
                     }
-                    res = res + if (ok) 1 else 0
+                    res += if (ok) 1 else 0
                 }
             }
         }

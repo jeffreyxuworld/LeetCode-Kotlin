@@ -1,3 +1,5 @@
+import kotlin.math.abs
+
 /*
  * @lc app=leetcode id=7 lang=kotlin
  *
@@ -46,7 +48,7 @@ class Solution7 {
         var res = 0
         var n = x
         while (n != 0) {
-            if (Math.abs(res) > Int.MAX_VALUE/10) return 0
+            if (abs(res) > Int.MAX_VALUE/10) return 0
 
             res = res*10 + n % 10
             n /= 10

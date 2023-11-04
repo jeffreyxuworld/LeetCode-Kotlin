@@ -6,7 +6,7 @@
 class Solution9 {
     fun isPalindrome(x: Int): Boolean {
         if (x < 0) return false
-        var a = IntArray(20)
+        val a = IntArray(20)
         var cnt = 0
         var n = x
 

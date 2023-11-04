@@ -40,7 +40,7 @@ class Solution169 {
         val n = nums.size/2
         val mm = mutableMapOf<Int, Int>()
         nums.forEach { 
-            mm.put(it, mm.getOrDefault(it, 0)+1)
+            mm[it] = mm.getOrDefault(it, 0)+1
             if (mm.getOrDefault(it, 0) > n) return it
         }
         return -1

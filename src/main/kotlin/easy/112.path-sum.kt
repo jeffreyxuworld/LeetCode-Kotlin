@@ -49,11 +49,11 @@ class Solution112 {
     private var ans: Int = 0
     fun hasPathSum(root: TreeNodeTest1?, sum: Int): Boolean {
         if (root == null) return false
-        val cnt = sum-root!!.`val`
-        if (root?.left == null && root?.right == null && cnt == 0)
+        val cnt = sum- root.`val`
+        if (root.left == null && root.right == null && cnt == 0)
             return true
-        return hasPathSum(root?.left, cnt) ||
-            hasPathSum(root?.right, cnt)
+        return hasPathSum(root.left, cnt) ||
+            hasPathSum(root.right, cnt)
     }
 
 }

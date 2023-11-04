@@ -89,7 +89,7 @@ class Solution859 {
         var st1 = ""
         var st2 = ""
 
-        for (i in 0 until A.length) {
+        for (i in A.indices) {
             if (A[i] != B[i]) {
                 diff++
                 st1 += A[i]
@@ -99,8 +99,8 @@ class Solution859 {
         if (diff == 1 || diff > 2) return false
         else if (diff == 2) return judge(st1, st2)
         else {
-            var nums = IntArray(30)
-            for (i in 0 until A.length) {
+            val nums = IntArray(30)
+            for (i in A.indices) {
                 nums[A[i]-'a']++
                 if (nums[A[i]-'a'] >= 2) return true
             }

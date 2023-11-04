@@ -35,7 +35,7 @@
 class Solution268 {
     fun missingNumber(nums: IntArray): Int {
         var sum = 0
-        var n = nums.size
+        val n = nums.size
         nums.forEach {
             sum += it
         }

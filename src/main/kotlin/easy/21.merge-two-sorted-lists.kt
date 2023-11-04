@@ -60,7 +60,7 @@ class Solution21 {
             }
             current = current.next!!/*compiler can't yet determine nullability of/smart cast 'complex expressions', but it is nonetheless guaranteed*/
         }
-        return result?.next
+        return result.next
     }
 }
 // @lc code=end

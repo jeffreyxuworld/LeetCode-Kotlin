@@ -26,8 +26,8 @@
  */
 class Solution204 {
     fun countPrimes(n: Int): Int {
-        var isp = BooleanArray(n+1) { true }
-        var p = mutableListOf<Int>()
+        val isp = BooleanArray(n+1) { true }
+        val p = mutableListOf<Int>()
 
         for (i in 2 until n) {
             if (isp[i]) p.add(i)
@@ -38,7 +38,7 @@ class Solution204 {
             }
         }
             
-        return p.size.toInt()
+        return p.size
 
     }
 }

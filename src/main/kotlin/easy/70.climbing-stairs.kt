@@ -44,7 +44,7 @@
  */
 class Solution70 {
     fun climbStairs(n: Int): Int {
-        var dp = IntArray(55, {0})
+        val dp = IntArray(55) { 0 }
         dp[1] = 1
         dp[2] = 2
 

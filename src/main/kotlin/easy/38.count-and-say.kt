@@ -51,20 +51,20 @@
 class Solution38 {
     fun countAndSay(n: Int): String {
         var last = "1"
-        (1 until n).forEach {
+        repeat((1 until n).count()) {
             var nextStr = ""
             var cnt = 0
-            for (i in 0 until last.length) {
+            for (i in last.indices) {
                 if (i == 0) {
                     cnt++
-                } else if (last[i] == last[i-1]) {
+                } else if (last[i] == last[i - 1]) {
                     cnt++
                 } else {
-                    nextStr += "${cnt}${last[i-1]}"
+                    nextStr += "${cnt}${last[i - 1]}"
                     cnt = 1
                 }
-                if (i == last.length-1)
-                        nextStr += "${cnt}${last[i]}"
+                if (i == last.length - 1)
+                    nextStr += "${cnt}${last[i]}"
             }
             last = nextStr
         }

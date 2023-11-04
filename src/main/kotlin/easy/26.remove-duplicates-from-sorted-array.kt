@@ -65,7 +65,7 @@
 // @lc code=start
 class Solution26 {
     fun removeDuplicates(nums: IntArray): Int {
-        var cnt = if (nums.size > 0) 1 else 0
+        var cnt = if (nums.isNotEmpty()) 1 else 0
 
         for (i in 1 until nums.size) {
             if (nums[i] == nums[i-1]) continue

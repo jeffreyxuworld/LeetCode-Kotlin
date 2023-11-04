@@ -70,8 +70,8 @@ class Solution872 {
 
     fun getSequence(root: TreeNodeTest1?, res: MutableList<Int>) {
         if (root?.left == null && root?.right == null) res.add(root!!.`val`)
-        if (root?.left != null) getSequence(root?.left, res)
-        if (root?.right != null) getSequence(root?.right, res)
+        if (root.left != null) getSequence(root.left, res)
+        if (root.right != null) getSequence(root.right, res)
     }
 }
 // @lc code=end

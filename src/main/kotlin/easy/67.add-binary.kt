@@ -34,7 +34,7 @@ class Solution67 {
     fun addBinary(a: String, b: String): String {
         var lena = a.length-1
         var lenb = b.length-1
-        var res: String = ""
+        var res = ""
         var cnt = 0
 
         while (lena >= 0 || lenb >= 0) {
