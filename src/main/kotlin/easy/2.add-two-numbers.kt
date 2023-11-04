@@ -52,14 +52,34 @@ class Solution2 {
             cnt = temp/10
             cur.next = ListNode(temp%10)
             cur = cur.next!!
-            if (p != null) p = p?.next
-            if (q != null) q = q?.next
+            if (p != null) p = p.next
+            if (q != null) q = q.next
         }
         if (cnt > 0) {
             cur.next = ListNode(cnt)
         }
         return head.next
     }
+
+}
+
+fun main(args: Array<String>) {
+    val test = Solution2()
+    val l1 = ListNode(2)
+    l1.next = ListNode(4)
+    l1.next!!.next =  ListNode(3)
+
+    val l2 = ListNode(5)
+    l2.next = ListNode(6)
+    l2.next!!.next = ListNode(4)
+
+    val result = test.addTwoNumbers(l1, l2)
+    if (result != null) {
+        println(result.`val`.toString())
+        println(result.next!!.`val`.toString())
+        println(result.next!!.next?.`val`.toString())
+    }
+
 }
 
 

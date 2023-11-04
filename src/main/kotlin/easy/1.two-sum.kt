@@ -33,7 +33,7 @@ class Solution1 {
     fun twoSum(nums: IntArray, target: Int): IntArray {
         val mm = HashMap<Int, Int>()
 
-        var res = mutableListOf<Int>()
+        val res = mutableListOf<Int>()
         
         for (i in nums.indices) {
             mm[nums[i]] = i
@@ -48,6 +48,20 @@ class Solution1 {
         }
 
         return res.toIntArray()
+    }
+}
+
+fun main(args: Array<String>) {
+    val nums : IntArray = intArrayOf(2,7,11,15)
+    val target = 9
+    val test = Solution1()
+    val result = test.twoSum(nums, target)
+
+    for (i in 0..result.size) {
+        println(result[i])
+        if(i == result.size - 1) {
+            break
+        }
     }
 }
 
